@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-export class EmailTemplate extends Component {
+class EmailTemplate extends Component {
   state = {
     orders: []
   };
@@ -9,13 +9,13 @@ export class EmailTemplate extends Component {
   getData = () => {
     axios.get("/api/orders")
     .then(response => {
-      console.log("my data", response.data)
       this.setState({ orders: response.data })
       .catch(err => {
         console.log(err);
       });
     });
   };
+  
 
   componentDidMount() {
     this.getData();

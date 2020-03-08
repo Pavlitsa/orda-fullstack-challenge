@@ -10,8 +10,7 @@ const logger = require("morgan");
 const path = require("path");
 
 mongoose
-  .connect(
-    process.env.MONGODB_URI || "mongodb://localhost/orda-fullstack-challenge",
+  .connect("mongodb://localhost/orda-fullstack-challenge",
     { useNewUrlParser: true }
   )
   .then(x => {

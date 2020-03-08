@@ -7,9 +7,8 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/api/orders" component={EmailTemplate} />
+        <Route exact path="/orders" component={EmailTemplate} />
       </Switch>
-      <EmailTemplate />
     </div>
   );
 }
