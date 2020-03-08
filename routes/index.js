@@ -9,14 +9,16 @@ router.get('/', (req, res, next) => {
 
 router.get("/orders", (req, res) => {
   // return all orders
-  // console.log("this is the body", req.body)
-  Order.find({})
+  Order.find({ venueId: "83841FA0-9595-11E8-B568-0800200C9A66" })
     .then(orders => {
+      console.log(orders)
+
       res.json(orders);
     })
     .catch(err => {
       res.status(500).json(err);
     });
 });
+
 
 module.exports = router;

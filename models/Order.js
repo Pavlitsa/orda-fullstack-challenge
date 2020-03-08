@@ -6,9 +6,9 @@ const orderSchema = new Schema({
   time: Number,
   tipSum: Number,
   venueId: String,
-  venueName: String
+  venueName: Object
 });
 
-const Order = mongoose.model("Order", orderSchema);
+const Order = mongoose.model("Order", orderSchema, "orda-orders");
 
 module.exports = Order;

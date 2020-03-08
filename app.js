@@ -10,9 +10,9 @@ const logger = require("morgan");
 const path = require("path");
 
 mongoose
-  .connect("mongodb://localhost/orda-fullstack-challenge",
-    { useNewUrlParser: true }
-  )
+  .connect("mongodb://localhost/orda-fullstack-challenge", {
+    useNewUrlParser: true
+  })
   .then(x => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
